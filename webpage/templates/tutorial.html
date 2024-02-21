@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+
+{% block title %}DeepWeb-使用文档{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename=('css/tutorial.css'))}}">
+{% endblock %}
+
+
+
+{% block body %}
+    <div class="row" style="margin-top: 15px">
+        <div class="col"></div>
+        <div class="col-8" style="background-color:#fff">
+            <ul class="tutorial-ul">
+                <li>
+                    <h3 style="margin-top:15px ;text-align: center">功能介绍</h3>
+                    <h5>整体系统</h5>
+                    <p class="content">
+                        整体系统核心构件如图所示,视频AI修复功能（包含上色和插帧两个子模块），视频AI增强功能（包括画质增强和超分），个人信息的管理（如更改用户名、密码等），普通版至Pro版的升级（会员的升级）；控制应用实现修复增强系统控制、账号控制、内容库控制、信息回显等相关功能，实现从传统的增强方案到基于深度学习的视频增强的重要转变。</p>
+                    <h5>修复流程</h5>
+                    <p class="content"> 如图所示，系统启动之后，会进行系统自检，如检测无误则读取相关配置，等待用户启动修复流程。
+                        修复流程启动后，将从用户个人视频库中导入素材，分别进行噪声抑制、修复雪花点等修复流程，如果用户输入的视频为黑白视频，则会逐帧进行视频拆解，对食品进行插帧上色，然后输入，若用户需要4k超分功能且用户客户端为Pro版，则跳出Pro版专有的超分功能界面，由用户进行自定义的超分设置并开启超分增强功能，用户可实时预览超分过程，接着输出最后的视频。 </p>
+                    <h5>增强流程</h5>
+                    <p class="content">如图所示，当用户确认启动视频增强服务之后，会从用户个人本地视频库输入视频，进行画质增强、细节增强、SDR调色等增强功能，如果用户是Pro版用户，可以在Pro版超分增强界面提前配置并且选择是否需要超分功能，当进行超分时，会有基于GAN的超分辨率增强和HDR色彩修补，用户得到可以预览的超分视频界面，接着用户选择导出到本地视频库，增强结束。</p>
+                </li>
+                <br>
+                <br>
+                <li>
+                    <h3 style="text-align: center">操作演示</h3>
+                    <p class="content">1.软件主界面如下</p>
+                    <img class="picture" src="{{ url_for('static',filename='images/tutorial/图片1.png') }}" alt="">
+                    <p class="content">2.在增强修复页面中，选择文件</p>
+                    <img class="picture-file" src="{{ url_for('static',filename='images/tutorial/图片2.png') }}" alt="">
+                    <p class="content">3.开始稳定修复，可以实时查看到结果</p>
+                    <img class="picture" src="{{ url_for('static',filename='images/tutorial/图片3.png') }}" alt="">
+                    <p class="content">4.对视频修复也是同样的操作，右侧都可以设置相应的参数</p>
+                    <img class="picture" src="{{ url_for('static',filename='images/tutorial/图片4.png') }}" alt="">
+                    <p class="content">5.任务进行中，中途可以终止任务</p>
+                    <img class="picture" src="{{ url_for('static',filename='images/tutorial/图片5.png') }}" alt="">
+                    <p class="content">6.点击左侧用户选项卡，切换到用户界面</p>
+                    <img class="picture" src="{{ url_for('static',filename='images/tutorial/图片6.png') }}" alt="">
+                    <p class="content">7.进行登录操作</p>
+                    <img class="picture" src="{{ url_for('static',filename='images/tutorial/图片7.png') }}" alt="">
+                    <p class="content">8.登录后显示个人信息</p>
+                    <img class="picture" src="{{ url_for('static',filename='images/tutorial/图片8.png') }}" alt="">
+                    <p class="content">9.可以对个人信息进行修改（点击“编辑信息”）</p>
+                    <img class="picture" src="{{ url_for('static',filename='images/tutorial/图片9.png') }}" alt="">
+                    <p class="content">10.输入想要修改的信息，修改信息成功</p>
+                    <img class="picture" src="{{ url_for('static',filename='images/tutorial/图片10.png') }}" alt="">
+                    <p class="content">11.VIP还可以使用超分增强服务</p>
+                    <img class="picture" src="{{ url_for('static',filename='images/tutorial/图片11.png') }}" alt="">
+                    <p class="content">12.使用VIP等级足够的账号，进入VIP超分增强界面</p>
+                    <img class="picture-file" src="{{ url_for('static',filename='images/tutorial/图片12.png') }}" alt="">
+                    <p class="content">13.设置界面如下</p>
+                    <img class="picture" src="{{ url_for('static',filename='images/tutorial/图片13.png') }}" alt="">
+                    <p class="content">14.可以修改主题</p>
+                    <img class="picture" src="{{ url_for('static',filename='images/tutorial/图片14.png') }}" alt="">
+                    <p class="content">15.在帮助界面，可以点击按钮，启动浏览器跳转到网页端</p>
+                    <img class="picture" src="{{ url_for('static',filename='images/tutorial/图片15.png') }}" alt="">
+                    <p class="content">16.问题反馈与交流界面</p>
+                    <img class="picture-file" src="{{ url_for('static',filename='images/tutorial/图片16.png') }}" alt="">
+                </li>
+
+            </ul>
+
+        </div>
+        <div class="col"></div>
+    </div>
+
+
+{% endblock %}

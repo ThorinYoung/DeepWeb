@@ -1,0 +1,31 @@
+.tutorial-ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.content{
+    text-indent: 2em;
+    margin-top: 5px;
+    line-height: 1.5;
+}
+
+.picture{
+    padding-left: 60px;
+    width: 650px;
+    height: 420px;
+    margin-top: 10px;
+    margin-bottom:15px;
+}
+
+
+.picture-file{
+    padding-left: 60px;
+    margin-top:10px;
+    margin-bottom:15px;
+    width: 650px;
+}
+
+h5{
+    text-indent: 30px;
+    margin-top: 10px;
+}
